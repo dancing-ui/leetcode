@@ -3,10 +3,9 @@ using namespace std;
 
 class Solution {
 public:
-    int maxProfit(vector<int> &prices) {
+    int maxProfit(int k, vector<int> &prices) {
         int n = prices.size();
         constexpr int inf = 0x3f3f3f3f;
-        int k = 2;
         vector<vector<vector<int>>> f(n, vector<vector<int>>(k + 1, vector<int>(2, 0)));
         f[0][0][0] = 0;
         f[0][0][1] = -prices[0];
